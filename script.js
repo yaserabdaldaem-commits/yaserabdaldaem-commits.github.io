@@ -71,16 +71,20 @@
     '.timeline-item, .skill-card, .about-text, .contact-card, .hero-text, .hero-image-wrap'
   );
 
-  fadeEls.forEach(el => el.classList.add('fade-in'));
+  const fadeIndexMap = new Map();
+  fadeEls.forEach((el, index) => {
+    el.classList.add('fade-in');
+    fadeIndexMap.set(el, index);
+  });
 
   const revealObserver = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry, i) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Stagger siblings slightly
+          const order = fadeIndexMap.get(entry.target) || 0;
           setTimeout(() => {
             entry.target.classList.add('visible');
-          }, i * 60);
+          }, (order % 6) * 60);
           revealObserver.unobserve(entry.target);
         }
       });
