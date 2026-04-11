@@ -5,22 +5,40 @@
 (function () {
   'use strict';
 
-  /* ---------- Navbar scroll effect ---------- */
+  /* ---------- Navbar scroll + hide-on-scroll-down ---------- */
   const navbar = document.getElementById('navbar');
+  let lastScrollY = 0;
+
   if (navbar) {
     window.addEventListener('scroll', () => {
-      navbar.classList.toggle('scrolled', window.scrollY > 40);
+      const currentY = window.scrollY;
+
+      // Add/remove scrolled class
+      navbar.classList.toggle('scrolled', currentY > 40);
+
+      // Hide navbar when scrolling down, show when scrolling up
+      if (currentY > 100) {
+        if (currentY > lastScrollY) {
+          navbar.classList.add('hidden');
+        } else {
+          navbar.classList.remove('hidden');
+        }
+      } else {
+        navbar.classList.remove('hidden');
+      }
+
+      lastScrollY = currentY;
     }, { passive: true });
   }
 
   /* ---------- Active nav link on scroll ---------- */
-  const sections = document.querySelectorAll('section[id]');
+  const sections   = document.querySelectorAll('section[id]');
   const navAnchors = document.querySelectorAll('.nav-links a');
 
   function updateActiveLink() {
     let current = '';
     sections.forEach(sec => {
-      if (window.scrollY >= sec.offsetTop - 100) {
+      if (window.scrollY >= sec.offsetTop - 120) {
         current = sec.getAttribute('id');
       }
     });
@@ -34,7 +52,7 @@
 
   /* ---------- Hamburger / mobile nav ---------- */
   const hamburger = document.getElementById('hamburger');
-  const navLinks   = document.getElementById('navLinks');
+  const navLinks  = document.getElementById('navLinks');
 
   if (hamburger && navLinks) {
     hamburger.addEventListener('click', () => {
@@ -84,12 +102,12 @@
           const order = fadeIndexMap.get(entry.target) || 0;
           setTimeout(() => {
             entry.target.classList.add('visible');
-          }, (order % 6) * 60);
+          }, (order % 6) * 70);
           revealObserver.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.12 }
+    { threshold: 0.1 }
   );
 
   fadeEls.forEach(el => revealObserver.observe(el));
@@ -100,6 +118,8 @@
       const target = document.querySelector(anchor.getAttribute('href'));
       if (target) {
         e.preventDefault();
+        // Re-show navbar when navigating
+        if (navbar) navbar.classList.remove('hidden');
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
