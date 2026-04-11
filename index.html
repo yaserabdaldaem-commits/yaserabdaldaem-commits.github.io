@@ -1,8 +1,386 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title></title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yaser — Flutter Developer building high-performance mobile apps. Based in Damascus, Syria." />
+  <title>Yaser — Flutter Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="navbar" class="navbar" role="banner">
+    <div class="container nav-container">
+      <a href="#hero" class="logo" aria-label="Yaser — home">Y<span>.</span></a>
+
+      <nav id="navLinks" class="nav-links" role="navigation" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+
+      <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero" aria-label="Introduction">
+    <div class="container hero-container">
+
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Yaser</h1>
+        <p class="hero-title">Flutter Developer</p>
+        <p class="hero-desc">
+          I build beautiful, performant cross-platform mobile apps—from concept to production.
+          Based in <strong>Damascus, Syria</strong>.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn-primary">View Work</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap" aria-hidden="true">
+        <div class="hero-avatar">
+          <!-- Profile image; falls back to SVG initials avatar -->
+          <img
+            src="profile.jpg"
+            alt="Yaser — Flutter Developer"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="display:none; align-items:center; justify-content:center;">
+            <circle cx="50" cy="50" r="50" fill="#192438"/>
+            <text x="50" y="57" text-anchor="middle" font-size="36" font-weight="800" fill="#ffffff" font-family="Inter,sans-serif">Y</text>
+          </svg>
+        </div>
+        <span class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for projects
+        </span>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section about-section" aria-labelledby="about-heading">
+    <div class="container">
+      <h2 id="about-heading" class="section-title">About <span>Me</span></h2>
+      <p class="section-sub">A little background</p>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a <strong>Flutter Developer</strong> who independently designed and shipped
+            three production-ready mobile applications — from initial idea all the way through
+            to store release.
+          </p>
+          <p>
+            I specialise in crafting beautiful, performant cross-platform apps using
+            <strong>Flutter &amp; Dart</strong>, backed by cloud services such as <strong>Firebase</strong>.
+            My day-to-day tooling includes <strong>Git/GitHub</strong>, <strong>Docker</strong>,
+            and <strong>Linux</strong> for a solid, reproducible development environment.
+          </p>
+          <p>
+            Based in <strong>Damascus, Syria</strong>, I'm passionate about clean architecture,
+            smooth UX, and writing code that lasts.
+          </p>
+        </div>
+
+        <div class="about-info">
+          <div class="info-card">
+            <span class="info-icon" aria-hidden="true">📍</span>
+            <div>
+              <strong>Location</strong>
+              <span>Damascus, Syria</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-icon" aria-hidden="true">💼</span>
+            <div>
+              <strong>Role</strong>
+              <span>Flutter Developer</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-icon" aria-hidden="true">🚀</span>
+            <div>
+              <strong>Apps Shipped</strong>
+              <span>3 production-ready apps</span>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-icon" aria-hidden="true">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:connect@yaserabdaldaem.me" aria-label="Send email to Yaser">connect@yaserabdaldaem.me</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WORK / PROJECTS ===== -->
+  <section id="work" class="section projects-section" aria-labelledby="work-heading">
+    <div class="container">
+      <h2 id="work-heading" class="section-title">My <span>Work</span></h2>
+      <p class="section-sub">A selection of projects I've built</p>
+
+      <div class="projects-grid">
+
+        <!-- Mouazen -->
+        <article class="project-card" aria-label="Mouazen project">
+          <div class="project-header">
+            <span class="project-icon" aria-hidden="true">⚖️</span>
+            <div class="project-links">
+              <a
+                href="https://github.com/yaserabdaldaem-commits/mouazen"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Mouazen on GitHub"
+              >
+                <!-- GitHub icon -->
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.021C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">Mouazen</h3>
+          <p class="project-desc">
+            A personal finance and budget-tracking app that helps users log expenses, set spending
+            limits, and visualise their financial health — all offline-first with clean Flutter UI.
+          </p>
+          <ul class="project-tags" aria-label="Technologies used">
+            <li class="tag">Flutter</li>
+            <li class="tag">Dart</li>
+            <li class="tag">Hive</li>
+            <li class="tag">Charts</li>
+          </ul>
+        </article>
+
+        <!-- Reader PDF -->
+        <article class="project-card" aria-label="Reader PDF project">
+          <div class="project-header">
+            <span class="project-icon" aria-hidden="true">📄</span>
+            <div class="project-links">
+              <a
+                href="https://github.com/yaserabdaldaem-commits/reader-pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Reader PDF on GitHub"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.021C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">Reader PDF</h3>
+          <p class="project-desc">
+            A lightweight, smooth PDF reader app built with Flutter. Supports bookmarks,
+            night mode, and quick page navigation — designed for a distraction-free reading
+            experience on both Android and iOS.
+          </p>
+          <ul class="project-tags" aria-label="Technologies used">
+            <li class="tag">Flutter</li>
+            <li class="tag">Dart</li>
+            <li class="tag">PDF Rendering</li>
+            <li class="tag">SQLite</li>
+          </ul>
+        </article>
+
+        <!-- Time Tracker -->
+        <article class="project-card" aria-label="Time Tracker project">
+          <div class="project-header">
+            <span class="project-icon" aria-hidden="true">⏱️</span>
+            <div class="project-links">
+              <a
+                href="https://github.com/yaserabdaldaem-commits/time-tracker"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Time Tracker on GitHub"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.021C22 6.484 17.522 2 12 2z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">Time Tracker</h3>
+          <p class="project-desc">
+            A productivity tool for tracking time spent on tasks and projects. Features
+            real-time timers, session history, Firebase sync, and insightful summary
+            reports to help you stay focused and measure output.
+          </p>
+          <ul class="project-tags" aria-label="Technologies used">
+            <li class="tag">Flutter</li>
+            <li class="tag">Dart</li>
+            <li class="tag">Firebase</li>
+            <li class="tag">Firestore</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
+    <div class="container">
+      <h2 id="skills-heading" class="section-title">My <span>Skills</span></h2>
+      <p class="section-sub">Technologies and tools I work with</p>
+
+      <ul class="skills-grid" aria-label="Skills list">
+        <li class="skill-card">
+          <span class="skill-icon" aria-hidden="true">📱</span>
+          <span>Flutter &amp; Dart</span>
+        </li>
+        <li class="skill-card">
+          <span class="skill-icon" aria-hidden="true">🔥</span>
+          <span>Firebase</span>
+        </li>
+        <li class="skill-card">
+          <span class="skill-icon" aria-hidden="true">🐙</span>
+          <span>Git / GitHub</span>
+        </li>
+        <li class="skill-card">
+          <span class="skill-icon" aria-hidden="true">🐳</span>
+          <span>Docker</span>
+        </li>
+        <li class="skill-card">
+          <span class="skill-icon" aria-hidden="true">🐧</span>
+          <span>Linux</span>
+        </li>
+        <li class="skill-card">
+          <span class="skill-icon" aria-hidden="true">⚙️</span>
+          <span>C# .NET</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION & CERTIFICATIONS ===== -->
+  <section id="education" class="section education-section" aria-labelledby="edu-heading">
+    <div class="container">
+      <h2 id="edu-heading" class="section-title">Education &amp; <span>Certifications</span></h2>
+      <p class="section-sub">Academic background and professional credentials</p>
+
+      <ol class="timeline" aria-label="Education and certifications timeline">
+
+        <li class="timeline-item">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card">
+            <span class="timeline-icon" aria-hidden="true">🎓</span>
+            <div class="timeline-body">
+              <h3>Software Engineering</h3>
+              <p class="timeline-org">Damascus University</p>
+              <p class="timeline-type">Bachelor's Degree</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card">
+            <span class="timeline-icon" aria-hidden="true">🏅</span>
+            <div class="timeline-body">
+              <h3>IBM Software Engineering</h3>
+              <p class="timeline-org">IBM / Coursera</p>
+              <p class="timeline-type">Professional Certificate</p>
+              <p class="timeline-date">Completed: February 25, 2026</p>
+            </div>
+          </div>
+        </li>
+
+        <li class="timeline-item">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card">
+            <span class="timeline-icon" aria-hidden="true">🏅</span>
+            <div class="timeline-body">
+              <h3>Google Git &amp; GitHub</h3>
+              <p class="timeline-org">Google / Coursera</p>
+              <p class="timeline-type">Professional Certificate</p>
+              <p class="timeline-date">Completed: April 11, 2026</p>
+            </div>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+    <div class="container">
+      <h2 id="contact-heading" class="section-title">Get in <span>Touch</span></h2>
+      <p class="section-sub">Let's build something great together</p>
+
+      <div class="contact-card">
+        <p class="contact-message">
+          Have a project in mind or just want to say hello?
+          My inbox is always open — reach out and I'll get back to you as soon as possible.
+        </p>
+        <a
+          href="mailto:connect@yaserabdaldaem.me"
+          class="btn btn-primary contact-btn"
+          aria-label="Send email to connect@yaserabdaldaem.me"
+        >
+          Say Hello ✉️
+        </a>
+        <p class="contact-email-hint">connect@yaserabdaldaem.me</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-container">
+      <p class="footer-copy">© 2026 Yaser. Built with ❤️ in Damascus.</p>
+
+      <div class="footer-links" aria-label="Social links">
+        <a
+          href="https://github.com/yaserabdaldaem-commits"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub profile"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.021C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+        <a
+          href="mailto:connect@yaserabdaldaem.me"
+          aria-label="Email Yaser"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
