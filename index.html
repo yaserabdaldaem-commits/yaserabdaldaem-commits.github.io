@@ -3,398 +3,365 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Yaser — Flutter Developer building high-performance mobile apps. Based in Damascus, Syria." />
-  <title>Yaser — Flutter Developer</title>
-
-  <!-- Google Fonts -->
+  <meta name="description" content="Yaser Abd al daem — Flutter Developer building high-performance mobile applications from Damascus, Syria." />
+  <meta name="keywords" content="Flutter Developer, Mobile Apps, Dart, Firebase, Yaser Abd al daem" />
+  <meta name="author" content="Yaser Abd al daem" />
+  <meta property="og:title" content="Yaser Abd al daem | Flutter Developer" />
+  <meta property="og:description" content="Flutter Developer building high-performance mobile applications." />
+  <meta property="og:url" content="https://yaserabdaldaem-commits.github.io" />
+  <meta property="og:type" content="website" />
+  <title>Yaser Abd al daem | Flutter Developer</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
-  <header id="navbar" class="navbar" role="banner">
-    <div class="container nav-container">
-      <a href="#hero" class="logo" aria-label="Yaser — home">Y<span>.</span></a>
-
-      <nav id="navLinks" class="nav-links" role="navigation" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#contact" class="nav-cta">Contact</a>
-      </nav>
-
-      <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+  <!-- ===== NAVIGATION ===== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#hero" class="nav__logo">Yaser<span>.</span></a>
+      <ul class="nav__list" id="navList">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#education" class="nav__link">Education</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span>
         <span></span>
         <span></span>
       </button>
-    </div>
+    </nav>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section id="hero" class="hero" aria-label="Introduction">
-    <div class="container hero-container">
+  <main>
 
-      <div class="hero-image-wrap" aria-hidden="true">
-        <div class="hero-avatar">
-          <!-- Profile image; falls back to SVG initials avatar -->
-          <img
-            src="assets/img/profile.jpg"
-            alt="Yaser — Flutter Developer"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          />
-          <svg role="img" aria-label="Profile avatar fallback" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="display:none; align-items:center; justify-content:center;">
-            <circle cx="50" cy="50" r="50" fill="#ffffff"/>
-            <text x="50" y="57" text-anchor="middle" font-size="36" font-weight="800" fill="#1a1a1a" font-family="Inter,sans-serif">Y</text>
-          </svg>
-        </div>
-        <span class="hero-badge">
-          <span class="badge-dot"></span>
-          Available for projects
-        </span>
-      </div>
-
-      <div class="hero-text">
-        <p class="hero-greeting">Hello, I'm</p>
-        <h1 class="hero-name">Yaser</h1>
-        <p class="hero-title">Flutter Developer</p>
-        <p class="hero-desc">
-          I build beautiful, performant cross-platform mobile apps—from concept to production.
-          Based in <strong>Damascus, Syria</strong>.
-        </p>
-        <div class="hero-actions">
-          <a href="#work" class="btn btn-primary">View Work</a>
-          <a href="#contact" class="btn btn-outline">Get in Touch</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="hero-scroll-hint" aria-hidden="true">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-  </section>
-
-  <!-- ===== ABOUT ===== -->
-  <section id="about" class="section about-section" aria-labelledby="about-heading">
-    <div class="container">
-      <h2 id="about-heading" class="section-title">About <span>Me</span></h2>
-      <p class="section-sub">A little background</p>
-
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            I'm a <strong>Flutter Developer</strong> who independently designed and shipped
-            three production-ready mobile applications — from initial idea all the way through
-            to store release.
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-grid" aria-hidden="true"></div>
+      <div class="container hero__container">
+        <div class="hero__content" data-animate="fade-up">
+          <p class="hero__greeting">Hello, I'm</p>
+          <h1 class="hero__name">Yaser Abd<br /><span>al daem</span></h1>
+          <h2 class="hero__title">Flutter Developer</h2>
+          <p class="hero__description">
+            Building high-performance mobile applications. I independently designed
+            and shipped three production-ready apps from concept to production.
           </p>
-          <p>
-            I specialise in crafting beautiful, performant cross-platform apps using
-            <strong>Flutter &amp; Dart</strong>, backed by cloud services such as <strong>Firebase</strong>.
-            My day-to-day tooling includes <strong>Git/GitHub</strong>, <strong>Docker</strong>,
-            and <strong>Linux</strong> for a solid, reproducible development environment.
-          </p>
-          <p>
-            Based in <strong>Damascus, Syria</strong>, I'm passionate about clean architecture,
-            smooth UX, and writing code that lasts.
-          </p>
-        </div>
-
-        <div class="about-info">
-          <div class="info-card">
-            <span class="info-icon" aria-hidden="true">📍</span>
-            <div>
-              <strong>Location</strong>
-              <span>Damascus, Syria</span>
-            </div>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary">Get In Touch</a>
+            <a href="#projects" class="btn btn--outline">View Projects</a>
           </div>
-          <div class="info-card">
-            <span class="info-icon" aria-hidden="true">💼</span>
-            <div>
-              <strong>Role</strong>
-              <span>Flutter Developer</span>
-            </div>
-          </div>
-          <div class="info-card">
-            <span class="info-icon" aria-hidden="true">🚀</span>
-            <div>
-              <strong>Apps Shipped</strong>
-              <span>3 production-ready apps</span>
-            </div>
-          </div>
-          <div class="info-card">
-            <span class="info-icon" aria-hidden="true">✉️</span>
-            <div>
-              <strong>Email</strong>
-              <a href="mailto:connect@yaserabdaldaem.me" aria-label="Send email to Yaser">connect@yaserabdaldaem.me</a>
-            </div>
+          <div class="hero__location">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Damascus, Syria</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== WORK / PROJECTS ===== -->
-  <section id="work" class="section projects-section" aria-labelledby="work-heading">
-    <div class="container">
-      <h2 id="work-heading" class="section-title">My <span>Work</span></h2>
-      <p class="section-sub">A selection of projects I've built</p>
-
-      <div class="projects-grid">
-
-        <!-- Mouazen -->
-        <article class="project-card" aria-label="Mouazen project">
-          <div class="project-header">
-            <span class="project-icon" aria-hidden="true">
-              <!-- Mosque silhouette SVG (original, copyright-free) -->
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="currentColor" aria-hidden="true">
-                <rect x="2" y="12" width="3" height="14" rx="0.5"/>
-                <path d="M2 12 L3.5 7 L5 12 Z"/>
-                <rect x="27" y="12" width="3" height="14" rx="0.5"/>
-                <path d="M27 12 L28.5 7 L30 12 Z"/>
-                <path d="M8 16 C8 10 24 10 24 16 Z"/>
-                <rect x="6" y="16" width="20" height="10" rx="1"/>
+        <div class="hero__image-wrap" data-animate="fade-left">
+          <div class="hero__image-ring" aria-hidden="true"></div>
+          <div class="hero__avatar" aria-label="Profile picture of Yaser Abd al daem">
+            <img src="assets/img/profile.jpg" alt="Yaser Abd al daem" class="hero__photo" id="profilePhoto" />
+            <div class="hero__avatar-fallback" id="avatarFallback" aria-hidden="true">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#4f8ef7"/>
+                    <stop offset="100%" style="stop-color:#7c5cfc"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="100" cy="100" r="100" fill="url(#avatarGrad)"/>
+                <circle cx="100" cy="82" r="32" fill="rgba(255,255,255,0.9)"/>
+                <ellipse cx="100" cy="160" rx="52" ry="40" fill="rgba(255,255,255,0.9)"/>
               </svg>
-            </span>
-            <div class="project-links">
-              <a
-                href="https://github.com/yaserabdaldaem-commits/mouazen"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Mouazen on GitHub"
-              >
-                <!-- GitHub icon -->
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.021C22 6.484 17.522 2 12 2z"/>
-                </svg>
-              </a>
+              <span class="hero__avatar-initials">YA</span>
             </div>
           </div>
-          <h3 class="project-name">Mouazen</h3>
-          <p class="project-desc">
-            A prayer-times and Athan app that helps users stay on schedule with accurate
-            timings, reminders, and a clean, fast Flutter experience.
-          </p>
-          <ul class="project-tags" aria-label="Technologies used">
-            <li class="tag">Flutter</li>
-            <li class="tag">Dart</li>
-            <li class="tag">Firebase</li>
-          </ul>
-        </article>
-
-        <!-- Reader PDF -->
-        <article class="project-card" aria-label="Reader PDF project">
-          <div class="project-header">
-            <span class="project-icon" aria-hidden="true">📄</span>
-            <div class="project-links">
-              <a
-                href="https://github.com/yaserabdaldaem-commits/reader-pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Reader PDF on GitHub"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.021C22 6.484 17.522 2 12 2z"/>
-                </svg>
-              </a>
-            </div>
+          <div class="hero__badge hero__badge--flutter" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.37zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z"/></svg>
+            Flutter
           </div>
-          <h3 class="project-name">Reader PDF</h3>
-          <p class="project-desc">
-            A lightweight, smooth PDF reader app built with Flutter. Supports bookmarks,
-            night mode, and quick page navigation — designed for a distraction-free reading
-            experience on both Android and iOS.
-          </p>
-          <ul class="project-tags" aria-label="Technologies used">
-            <li class="tag">Flutter</li>
-            <li class="tag">Dart</li>
-            <li class="tag">PDF Rendering</li>
-            <li class="tag">Firebase</li>
-          </ul>
-        </article>
-
-        <!-- Time Tracker -->
-        <article class="project-card" aria-label="Time Tracker project">
-          <div class="project-header">
-            <span class="project-icon" aria-hidden="true">⏱️</span>
-            <div class="project-links">
-              <a
-                href="https://github.com/yaserabdaldaem-commits/time-tracker"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View Time Tracker on GitHub"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.021C22 6.484 17.522 2 12 2z"/>
-                </svg>
-              </a>
-            </div>
+          <div class="hero__badge hero__badge--apps" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="9" height="9" rx="2"/><rect x="13" y="2" width="9" height="9" rx="2"/><rect x="2" y="13" width="9" height="9" rx="2"/><rect x="13" y="13" width="9" height="9" rx="2"/></svg>
+            3 Apps Shipped
           </div>
-          <h3 class="project-name">Time Tracker</h3>
-          <p class="project-desc">
-            A productivity tool for tracking time spent on tasks and projects. Features
-            real-time timers, session history, Firebase sync, and insightful summary
-            reports to help you stay focused and measure output.
-          </p>
-          <ul class="project-tags" aria-label="Technologies used">
-            <li class="tag">Flutter</li>
-            <li class="tag">Dart</li>
-            <li class="tag">Firebase</li>
-            <li class="tag">Firestore</li>
-          </ul>
-        </article>
-
+        </div>
       </div>
-    </div>
-  </section>
+      <a href="#about" class="hero__scroll" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
 
-  <!-- ===== SKILLS ===== -->
-  <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
-    <div class="container">
-      <h2 id="skills-heading" class="section-title">My <span>Skills</span></h2>
-      <p class="section-sub">Technologies and tools I work with</p>
-
-      <ul class="skills-grid" aria-label="Skills list">
-        <li class="skill-card">
-          <span class="skill-icon" aria-hidden="true">📱</span>
-          <span>Flutter &amp; Dart</span>
-        </li>
-        <li class="skill-card">
-          <span class="skill-icon" aria-hidden="true">🔥</span>
-          <span>Firebase</span>
-        </li>
-        <li class="skill-card">
-          <span class="skill-icon" aria-hidden="true">🐙</span>
-          <span>Git / GitHub</span>
-        </li>
-        <li class="skill-card">
-          <span class="skill-icon" aria-hidden="true">🐳</span>
-          <span>Docker</span>
-        </li>
-        <li class="skill-card">
-          <span class="skill-icon" aria-hidden="true">🐧</span>
-          <span>Linux</span>
-        </li>
-        <li class="skill-card">
-          <span class="skill-icon" aria-hidden="true">
-            <!-- C# icon — Simple Icons, CC0 -->
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M22.394 6c-.167-.29-.398-.543-.652-.69L12.926.22c-.509-.294-1.34-.294-1.848 0L2.26 5.31c-.508.293-.923 1.013-.923 1.6v10.18c0 .294.104.62.271.91.167.29.398.543.652.69l8.816 5.09c.508.293 1.34.293 1.848 0l8.816-5.09c.254-.147.485-.4.652-.69.167-.29.27-.616.27-.91V6.91c.003-.294-.1-.62-.268-.91zM12 19.11c-3.92 0-7.109-3.19-7.109-7.11 0-3.92 3.19-7.11 7.109-7.11 2.55 0 4.93 1.36 6.223 3.55l-3.033 1.75c-.637-1.1-1.822-1.78-3.19-1.78-2.006 0-3.63 1.63-3.63 3.59 0 1.96 1.624 3.59 3.63 3.59 1.37 0 2.55-.68 3.19-1.78l3.033 1.75C16.93 17.75 14.55 19.11 12 19.11zm7.09-7.11c0 .228-.066.452-.185.645-.12.193-.289.35-.49.45-.2.1-.421.15-.647.15-.226 0-.447-.05-.647-.15a1.284 1.284 0 01-.489-.45 1.266 1.266 0 01-.185-.645c0-.228.065-.452.185-.645.12-.193.289-.35.49-.45.2-.1.42-.15.646-.15.227 0 .447.05.647.15.2.1.37.257.489.45.12.193.185.417.185.645zm-2.61 0c0 .228-.066.452-.185.645-.12.193-.29.35-.49.45a1.307 1.307 0 01-1.295 0 1.284 1.284 0 01-.489-.45 1.266 1.266 0 01-.185-.645c0-.228.065-.452.185-.645.12-.193.29-.35.489-.45a1.307 1.307 0 011.295 0c.2.1.37.257.489.45.12.193.186.417.186.645z"/>
-            </svg>
-          </span>
-          <span>C# .NET</span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ===== EDUCATION & CERTIFICATIONS ===== -->
-  <section id="education" class="section education-section" aria-labelledby="edu-heading">
-    <div class="container">
-      <h2 id="edu-heading" class="section-title">Education &amp; <span>Certifications</span></h2>
-      <p class="section-sub">Academic background and professional credentials</p>
-
-      <ol class="timeline" aria-label="Education and certifications timeline">
-
-        <li class="timeline-item">
-          <div class="timeline-dot" aria-hidden="true"></div>
-          <div class="timeline-card">
-            <span class="timeline-icon" aria-hidden="true">🎓</span>
-            <div class="timeline-body">
-              <h3>Software Engineering</h3>
-              <p class="timeline-org">Damascus University</p>
-              <p class="timeline-type">Bachelor's Degree</p>
-            </div>
-          </div>
-        </li>
-
-        <li class="timeline-item">
-          <div class="timeline-dot" aria-hidden="true"></div>
-          <div class="timeline-card">
-            <span class="timeline-icon" aria-hidden="true">🏅</span>
-            <div class="timeline-body">
-              <h3>IBM Software Engineering</h3>
-              <p class="timeline-org">IBM / Coursera</p>
-              <p class="timeline-type">Professional Certificate</p>
-              <p class="timeline-date">Completed: February 25, 2026</p>
-            </div>
-          </div>
-        </li>
-
-        <li class="timeline-item">
-          <div class="timeline-dot" aria-hidden="true"></div>
-          <div class="timeline-card">
-            <span class="timeline-icon" aria-hidden="true">🏅</span>
-            <div class="timeline-body">
-              <h3>Google Git &amp; GitHub</h3>
-              <p class="timeline-org">Google / Coursera</p>
-              <p class="timeline-type">Professional Certificate</p>
-              <p class="timeline-date">Completed: April 11, 2026</p>
-            </div>
-          </div>
-        </li>
-
-      </ol>
-    </div>
-  </section>
-
-  <!-- ===== CONTACT ===== -->
-  <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
-    <div class="container">
-      <h2 id="contact-heading" class="section-title">Get in <span>Touch</span></h2>
-      <p class="section-sub">Let's build something great together</p>
-
-      <div class="contact-card">
-        <p class="contact-message">
-          Have a project in mind or just want to say hello?
-          My inbox is always open — reach out and I'll get back to you as soon as possible.
-        </p>
-        <a
-          href="mailto:connect@yaserabdaldaem.me"
-          class="btn btn-primary contact-btn"
-          aria-label="Send email to connect@yaserabdaldaem.me"
-        >
-          Say Hello ✉️
-        </a>
-        <p class="contact-email-hint">connect@yaserabdaldaem.me</p>
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section__header" data-animate="fade-up">
+          <p class="section__subtitle">Who I Am</p>
+          <h2 class="section__title">About Me</h2>
+        </div>
+        <div class="about__content" data-animate="fade-up">
+          <p class="about__text">
+            Flutter Developer building high-performance mobile applications. I
+            independently designed and shipped three production-ready apps from
+            concept to production — handling everything from UI/UX design to
+            backend integration, deployment and publishing.
+          </p>
+          <p class="about__text">
+            Based in <strong>Damascus, Syria</strong>, I'm passionate about
+            building elegant, user-friendly experiences on mobile using the
+            Flutter &amp; Dart ecosystem alongside Firebase, Docker, and Linux.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <div class="section__header" data-animate="fade-up">
+          <p class="section__subtitle">My Work</p>
+          <h2 class="section__title">Projects</h2>
+        </div>
+        <div class="projects__grid">
+
+          <article class="project-card" data-animate="fade-up">
+            <div class="project-card__header">
+              <div class="project-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/yaserabdaldaem-commits/mouazen" class="project-card__link" target="_blank" rel="noopener noreferrer" aria-label="View Mouazen on GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Mouazen</h3>
+            <p class="project-card__description">
+              A Flutter application designed to help users track and balance their daily activities and goals. Features an intuitive interface with real-time data synchronization via Firebase.
+            </p>
+            <div class="project-card__tech">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Dart</span>
+              <span class="tech-tag">Firebase</span>
+            </div>
+            <a href="https://github.com/yaserabdaldaem-commits/mouazen" class="project-card__btn" target="_blank" rel="noopener noreferrer">
+              View on GitHub
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card" data-animate="fade-up" data-delay="100">
+            <div class="project-card__header">
+              <div class="project-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/yaserabdaldaem-commits/time-tracker" class="project-card__link" target="_blank" rel="noopener noreferrer" aria-label="View Time Tracker Pro on GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Time Tracker Pro</h3>
+            <p class="project-card__description">
+              A professional time tracking application built with Flutter. Allows users to log work sessions, manage projects, and generate detailed productivity reports with a clean, modern UI.
+            </p>
+            <div class="project-card__tech">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Dart</span>
+              <span class="tech-tag">SQLite</span>
+            </div>
+            <a href="https://github.com/yaserabdaldaem-commits/time-tracker" class="project-card__btn" target="_blank" rel="noopener noreferrer">
+              View on GitHub
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </article>
+
+          <article class="project-card" data-animate="fade-up" data-delay="200">
+            <div class="project-card__header">
+              <div class="project-card__icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/yaserabdaldaem-commits/reader-pdf" class="project-card__link" target="_blank" rel="noopener noreferrer" aria-label="View IT Institute PDF Reader on GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">IT Institute PDF Reader</h3>
+            <p class="project-card__description">
+              A dedicated PDF reader application tailored for IT Institute students. Provides smooth document navigation, bookmarks, and annotation features for an enhanced learning experience.
+            </p>
+            <div class="project-card__tech">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Dart</span>
+              <span class="tech-tag">PDF</span>
+            </div>
+            <a href="https://github.com/yaserabdaldaem-commits/reader-pdf" class="project-card__btn" target="_blank" rel="noopener noreferrer">
+              View on GitHub
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION & CERTIFICATIONS ===== -->
+    <section class="education section" id="education">
+      <div class="container">
+        <div class="section__header" data-animate="fade-up">
+          <p class="section__subtitle">Background</p>
+          <h2 class="section__title">Education &amp; Certifications</h2>
+        </div>
+        <div class="education__grid">
+
+          <div class="edu-card edu-card--university" data-animate="fade-up">
+            <div class="edu-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="edu-card__body">
+              <span class="edu-card__type">University</span>
+              <h3 class="edu-card__title">Software Engineering</h3>
+              <p class="edu-card__org">Damascus University</p>
+              <p class="edu-card__location">Damascus, Syria</p>
+            </div>
+          </div>
+
+          <div class="edu-card" data-animate="fade-up" data-delay="100">
+            <div class="edu-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="edu-card__body">
+              <span class="edu-card__type">Professional Certificate</span>
+              <h3 class="edu-card__title">DevOps &amp; Software Engineering</h3>
+              <p class="edu-card__org">IBM</p>
+              <p class="edu-card__date">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Completed: Feb 25, 2026
+              </p>
+            </div>
+          </div>
+
+          <div class="edu-card" data-animate="fade-up" data-delay="200">
+            <div class="edu-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="edu-card__body">
+              <span class="edu-card__type">Professional Certificate</span>
+              <h3 class="edu-card__title">Git &amp; GitHub</h3>
+              <p class="edu-card__org">Google</p>
+              <p class="edu-card__date">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Completed: Apr 11, 2026
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <div class="section__header" data-animate="fade-up">
+          <p class="section__subtitle">Expertise</p>
+          <h2 class="section__title">Skills &amp; Technologies</h2>
+        </div>
+        <div class="skills__grid" data-animate="fade-up">
+
+          <div class="skill-item">
+            <div class="skill-item__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.37zm.014 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.37z"/></svg>
+            </div>
+            <span class="skill-item__name">Flutter &amp; Dart</span>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-item__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M3.89 15.672L6.255.461A.542.542 0 0 1 7.27.289L9.813 5.06 3.89 15.672zm16.794 3.692l-2.25-14a.54.54 0 0 0-.919-.295l-14.2 14.294 7.857 4.428a1.621 1.621 0 0 0 1.587 0l7.926-4.427zm-9.829-10.13l-2.08-3.818a.568.568 0 0 0-1.004 0L1.108 18.876l9.747-9.642z"/></svg>
+            </div>
+            <span class="skill-item__name">Firebase</span>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-item__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </div>
+            <span class="skill-item__name">Git / GitHub</span>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-item__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M13.983 11.078h2.119a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 0 0 .186-.186V3.574a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 0 0 .186-.186V6.29a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 0 0 .184-.186V6.29a.185.185 0 0 0-.185-.185H8.1a.185.185 0 0 0-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 0 0 .185-.186V6.29a.185.185 0 0 0-.185-.185H5.136a.186.186 0 0 0-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 0 0 .185-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.186.186 0 0 0-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.186.186 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.185.186v1.887c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 0 0-.75.748 11.376 11.376 0 0 0 .692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 0 0 3.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/></svg>
+            </div>
+            <span class="skill-item__name">Docker</span>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-item__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 0 0 .11.135 9.774 9.774 0 0 1-.093-.238 7.976 7.976 0 0 1-.43-2.65c0-1.61.48-3.089 1.168-4.315h-.004c.606-1.095.644-1.296.773-2.001.168-.9.135-1.77-.04-2.66-.258-1.278-1.166-2.458-2.636-2.75a3.932 3.932 0 0 0-.744-.078c-.27 0-.52.044-.749.12C.847 2.34.405 3.71.27 5.29c-.086.996.031 2.066.335 3.06.282.918.764 1.785 1.452 2.594C3.23 12.46 3.57 14.3 3.327 16.04a9.07 9.07 0 0 1-.188 1.014 9.21 9.21 0 0 0 .048-.965c.032-1.758.75-3.384 1.782-4.714a17.6 17.6 0 0 0 .898-1.316c.493-.84.821-1.656.977-2.549.157-.9.064-1.86-.228-2.817-.1-.317-.228-.63-.367-.94A.516.516 0 0 1 6.277 4.3c.19.444.39.881.589 1.285.382.777.77 1.45 1.095 1.955.323.505.605.882.757 1.086.198.264.3.594.245.928-.056.333-.239.633-.505.858-.265.224-.6.35-.943.35a1.45 1.45 0 0 1-.47-.082c-.37-.117-.7-.37-.93-.722-.23-.35-.354-.772-.354-1.201 0-.147.014-.29.042-.43-.037.14-.06.285-.066.432-.023.53.147 1.062.484 1.477.337.414.834.68 1.37.727a2.01 2.01 0 0 0 .166.007c.506 0 .99-.18 1.374-.497.384-.317.65-.768.73-1.258.082-.49-.008-.985-.258-1.402a7.985 7.985 0 0 0-.39-.57l-.011-.016a16.4 16.4 0 0 1-.735-1.18c-.23-.416-.44-.845-.618-1.284A.56.56 0 0 0 8.4 4.7c.078.2.164.397.258.592.265.543.582 1.063.942 1.545a9.52 9.52 0 0 1 .694 1.123c.23.445.378.92.432 1.407.054.488-.001.982-.162 1.451a4.785 4.785 0 0 1-.656 1.268 6.89 6.89 0 0 0-.82 1.758c-.1.367-.147.747-.135 1.13.018.516.15 1.018.385 1.47.237.452.577.843.992 1.142.415.298.896.494 1.405.572.247.038.5.058.756.058.386 0 .775-.044 1.154-.131a7.054 7.054 0 0 0 2.73-1.262 7.032 7.032 0 0 0 1.857-2.167c.43-.83.637-1.735.605-2.647a5.98 5.98 0 0 0-.444-2.134 14.4 14.4 0 0 0-.973-2.003c-.363-.624-.734-1.203-1.078-1.725a18.5 18.5 0 0 1-.864-1.55c-.24-.513-.417-1.044-.513-1.585-.096-.541-.107-1.09-.03-1.635a6.87 6.87 0 0 1 .554-1.877A.67.67 0 0 0 14.9.05c-.073.196-.14.396-.2.596-.182.604-.263 1.22-.24 1.837.023.617.148 1.228.37 1.815.222.588.542 1.15.943 1.668.4.52.878 1 1.412 1.438.535.44 1.12.83 1.744 1.17.31.17.63.326.954.468.642.283 1.317.498 2.007.644.69.146 1.396.224 2.1.233A13.35 13.35 0 0 0 24 9.58a.507.507 0 0 0-.137-.338c-.24-.245-.657-.387-1.143-.387-.144 0-.29.014-.437.041-.298.057-.598.168-.887.325a5.73 5.73 0 0 0-.794.544c-.248.198-.478.417-.69.65-.21.232-.398.478-.563.73a6.11 6.11 0 0 0-.408.797c-.106.267-.186.54-.237.818a5.56 5.56 0 0 0-.073.847c0 .37.04.737.117 1.094a6.92 6.92 0 0 0 .715 1.897 7.3 7.3 0 0 0 1.254 1.61c.5.474 1.085.855 1.727 1.121.64.267 1.327.41 2.02.42a.51.51 0 0 0 .028-1.017 5.716 5.716 0 0 1-1.657-.366 5.687 5.687 0 0 1-1.39-.793 5.75 5.75 0 0 1-1.066-1.175 5.822 5.822 0 0 1-.668-1.47 5.88 5.88 0 0 1-.215-1.547c0-.37.04-.738.12-1.1a5.44 5.44 0 0 1 .675-1.667c.32-.523.725-.988 1.195-1.38.47-.393 1.003-.708 1.577-.929a5.69 5.69 0 0 1 1.917-.38c.192-.004.383.003.574.02a.51.51 0 0 0 .102-1.012 6.695 6.695 0 0 0-.683-.035c-.76 0-1.5.147-2.197.434-.696.286-1.334.71-1.878 1.246a7.25 7.25 0 0 0-1.308 1.994 7.284 7.284 0 0 0-.485 2.476c0 .694.093 1.38.274 2.045a8.02 8.02 0 0 0 .82 2.015 8.06 8.06 0 0 0 1.383 1.747 8.05 8.05 0 0 0 1.9 1.28c.71.33 1.476.53 2.254.585.39.028.78.028 1.17.002a.508.508 0 0 0 .47-.54.51.51 0 0 0-.54-.47z"/></svg>
+            </div>
+            <span class="skill-item__name">Linux</span>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-item__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M.9 8.1C.4 8.4 0 9 0 9.6v4.8c0 .6.4 1.2.9 1.5l4.2 2.4v-1.8l-3-1.7V9.1l3 1.7V9L.9 8.1zM12 2L.9 8.1 3.9 9.8 12 5.4l8.1 4.4 3-1.7L12 2zm0 9.7L9 9.9v3.8l3 1.7 3-1.7V9.9l-3 1.8zm0 3.7l-4.2 2.4v3.8l4.2 2.4 4.2-2.4v-3.8L12 15.4zm8.1-7.3l-3 1.7 3 1.7v5.5l-3 1.7v1.8l4.2-2.4c.5-.3.7-.9.7-1.5V9.6c0-.6-.4-1.2-.9-1.5l-1 .6v-1.2l-.1.6z"/></svg>
+            </div>
+            <span class="skill-item__name">C# .NET</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="section__header" data-animate="fade-up">
+          <p class="section__subtitle">Let's Talk</p>
+          <h2 class="section__title">Get In Touch</h2>
+        </div>
+        <div class="contact__content" data-animate="fade-up">
+          <p class="contact__text">
+            Have a project in mind or want to collaborate? Feel free to reach out —
+            I'm always open to new opportunities and interesting conversations.
+          </p>
+          <div class="contact__links">
+            <a href="mailto:connect@yaserabdaldaem.me" class="contact__email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              connect@yaserabdaldaem.me
+            </a>
+            <a href="https://github.com/yaserabdaldaem-commits" class="contact__github" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              GitHub Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- ===== FOOTER ===== -->
-  <footer class="footer" role="contentinfo">
-    <div class="container footer-container">
-      <p class="footer-copy">© 2026 Yaser. Built with ❤️ in Damascus.</p>
-
-      <div class="footer-links" aria-label="Social links">
-        <a
-          href="https://github.com/yaserabdaldaem-commits"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub profile"
-        >
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.021C22 6.484 17.522 2 12 2z"/>
-          </svg>
-        </a>
-        <a
-          href="mailto:connect@yaserabdaldaem.me"
-          aria-label="Email Yaser"
-        >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="2" y="4" width="20" height="16" rx="2"/>
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-          </svg>
-        </a>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <p class="footer__copy">
+          &copy; <span id="year"></span> Yaser Abd al daem. All rights reserved.
+        </p>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="#hero">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
