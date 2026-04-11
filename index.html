@@ -40,6 +40,25 @@
   <section id="hero" class="hero" aria-label="Introduction">
     <div class="container hero-container">
 
+      <div class="hero-image-wrap" aria-hidden="true">
+        <div class="hero-avatar">
+          <!-- Profile image; falls back to SVG initials avatar -->
+          <img
+            src="assets/img/profile.jpg"
+            alt="Yaser — Flutter Developer"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <svg role="img" aria-label="Profile avatar fallback" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="display:none; align-items:center; justify-content:center;">
+            <circle cx="50" cy="50" r="50" fill="#ffffff"/>
+            <text x="50" y="57" text-anchor="middle" font-size="36" font-weight="800" fill="#1a1a1a" font-family="Inter,sans-serif">Y</text>
+          </svg>
+        </div>
+        <span class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for projects
+        </span>
+      </div>
+
       <div class="hero-text">
         <p class="hero-greeting">Hello, I'm</p>
         <h1 class="hero-name">Yaser</h1>
@@ -52,25 +71,6 @@
           <a href="#work" class="btn btn-primary">View Work</a>
           <a href="#contact" class="btn btn-outline">Get in Touch</a>
         </div>
-      </div>
-
-      <div class="hero-image-wrap" aria-hidden="true">
-        <div class="hero-avatar">
-          <!-- Profile image; falls back to SVG initials avatar -->
-          <img
-            src="profile.jpg"
-            alt="Yaser — Flutter Developer"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          />
-          <svg role="img" aria-label="Profile avatar fallback" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="display:none; align-items:center; justify-content:center;">
-            <circle cx="50" cy="50" r="50" fill="#ffffff"/>
-            <text x="50" y="57" text-anchor="middle" font-size="36" font-weight="800" fill="#0b1220" font-family="Inter,sans-serif">Y</text>
-          </svg>
-        </div>
-        <span class="hero-badge">
-          <span class="badge-dot"></span>
-          Available for projects
-        </span>
       </div>
     </div>
 
@@ -177,14 +177,13 @@
           </div>
           <h3 class="project-name">Mouazen</h3>
           <p class="project-desc">
-            A personal finance and budget-tracking app that helps users log expenses, set spending
-            limits, and visualise their financial health — all offline-first with clean Flutter UI.
+            A prayer-times and Athan app that helps users stay on schedule with accurate
+            timings, reminders, and a clean, fast Flutter experience.
           </p>
           <ul class="project-tags" aria-label="Technologies used">
             <li class="tag">Flutter</li>
             <li class="tag">Dart</li>
-            <li class="tag">Hive</li>
-            <li class="tag">Charts</li>
+            <li class="tag">Firebase</li>
           </ul>
         </article>
 
@@ -282,7 +281,12 @@
           <span>Linux</span>
         </li>
         <li class="skill-card">
-          <span class="skill-icon" aria-hidden="true">⚙️</span>
+          <span class="skill-icon" aria-hidden="true">
+            <!-- C# icon — Simple Icons, CC0 -->
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M22.394 6c-.167-.29-.398-.543-.652-.69L12.926.22c-.509-.294-1.34-.294-1.848 0L2.26 5.31c-.508.293-.923 1.013-.923 1.6v10.18c0 .294.104.62.271.91.167.29.398.543.652.69l8.816 5.09c.508.293 1.34.293 1.848 0l8.816-5.09c.254-.147.485-.4.652-.69.167-.29.27-.616.27-.91V6.91c.003-.294-.1-.62-.268-.91zM12 19.11c-3.92 0-7.109-3.19-7.109-7.11 0-3.92 3.19-7.11 7.109-7.11 2.55 0 4.93 1.36 6.223 3.55l-3.033 1.75c-.637-1.1-1.822-1.78-3.19-1.78-2.006 0-3.63 1.63-3.63 3.59 0 1.96 1.624 3.59 3.63 3.59 1.37 0 2.55-.68 3.19-1.78l3.033 1.75C16.93 17.75 14.55 19.11 12 19.11zm7.09-7.11c0 .228-.066.452-.185.645-.12.193-.289.35-.49.45-.2.1-.421.15-.647.15-.226 0-.447-.05-.647-.15a1.284 1.284 0 01-.489-.45 1.266 1.266 0 01-.185-.645c0-.228.065-.452.185-.645.12-.193.289-.35.49-.45.2-.1.42-.15.646-.15.227 0 .447.05.647.15.2.1.37.257.489.45.12.193.185.417.185.645zm-2.61 0c0 .228-.066.452-.185.645-.12.193-.29.35-.49.45a1.307 1.307 0 01-1.295 0 1.284 1.284 0 01-.489-.45 1.266 1.266 0 01-.185-.645c0-.228.065-.452.185-.645.12-.193.29-.35.489-.45a1.307 1.307 0 011.295 0c.2.1.37.257.489.45.12.193.186.417.186.645z"/>
+            </svg>
+          </span>
           <span>C# .NET</span>
         </li>
       </ul>
