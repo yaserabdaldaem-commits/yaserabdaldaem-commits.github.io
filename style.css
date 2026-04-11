@@ -15,7 +15,7 @@
   --text:      #ffffff;
   --text-muted:#8892a4;
   --border:    rgba(255,255,255,.08);
-  --radius:    12px;
+  --avatar-bg:  #ffffff;
   --radius-lg: 20px;
   --shadow:    0 4px 32px rgba(0,0,0,.6);
   --transition:all .3s cubic-bezier(.4,0,.2,1);
@@ -324,13 +324,13 @@ ul, ol { list-style: none; }
 }
 
 .hero-avatar {
-  width: 260px;
-  height: 260px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
-  background: var(--surface);
+  background: var(--avatar-bg);
   border: 1px solid var(--border);
   overflow: hidden;
-  box-shadow: 0 0 80px rgba(255,255,255,.05), var(--shadow);
+  box-shadow: 0 0 80px rgba(255,255,255,.1), var(--shadow);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -346,6 +346,7 @@ ul, ol { list-style: none; }
   height: 100%;
   object-fit: cover;
   object-position: center top;
+  transform: scale(1.1);
 }
 
 .hero-badge {
@@ -496,7 +497,7 @@ ul, ol { list-style: none; }
   align-items: center;
 }
 
-.project-icon { font-size: 1.75rem; }
+.project-icon { font-size: 1.75rem; line-height: 1; display: flex; align-items: center; }
 
 .project-links a {
   display: flex;
@@ -763,7 +764,7 @@ ul, ol { list-style: none; }
 
   .hero-actions { justify-content: center; }
 
-  .hero-avatar { width: 190px; height: 190px; }
+  .hero-avatar { width: 230px; height: 230px; }
 
   .about-grid { grid-template-columns: 1fr; }
 
