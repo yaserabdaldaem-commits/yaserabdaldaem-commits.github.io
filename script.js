@@ -1,128 +1,81 @@
-/* =========================================================
-   script.js – Interactions & Animations
-   ========================================================= */
+const header = document.getElementById("header");
+const navToggle = document.getElementById("navToggle");
+const navMenu = document.getElementById("navMenu");
+const navLinks = document.querySelectorAll(".nav-link");
 
-(function () {
-  'use strict';
+if (navToggle && navMenu) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = navMenu.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+  });
 
-  /* ---------- Navbar scroll + hide-on-scroll-down ---------- */
-  const navbar = document.getElementById('navbar');
-  let lastScrollY = 0;
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Open navigation menu");
+    });
+  });
+}
 
-  if (navbar) {
-    window.addEventListener('scroll', () => {
-      const currentY = window.scrollY;
+const yearElement = document.getElementById("year");
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
 
-      // Add/remove scrolled class
-      navbar.classList.toggle('scrolled', currentY > 40);
+const sections = document.querySelectorAll("main section[id]");
 
-      // Hide navbar when scrolling down, show when scrolling up
-      if (currentY > 100) {
-        if (currentY > lastScrollY) {
-          navbar.classList.add('hidden');
-        } else {
-          navbar.classList.remove('hidden');
-        }
-      } else {
-        navbar.classList.remove('hidden');
-      }
+function updateActiveLink() {
+  const scrollPos = window.scrollY + 120;
 
-      lastScrollY = currentY;
-    }, { passive: true });
+  sections.forEach((section) => {
+    const id = section.getAttribute("id");
+    const top = section.offsetTop;
+    const bottom = top + section.offsetHeight;
+    const active = scrollPos >= top && scrollPos < bottom;
+    const targetLink = document.querySelector(`.nav-link[href="#${id}"]`);
+
+    if (targetLink) {
+      targetLink.classList.toggle("active", active);
+    }
+  });
+}
+
+function updateHeaderState() {
+  if (!header) {
+    return;
   }
 
-  /* ---------- Active nav link on scroll ---------- */
-  const sections   = document.querySelectorAll('section[id]');
-  const navAnchors = document.querySelectorAll('.nav-links a');
+  header.classList.toggle("scrolled", window.scrollY > 20);
+}
 
-  function updateActiveLink() {
-    let current = '';
-    sections.forEach(sec => {
-      if (window.scrollY >= sec.offsetTop - 120) {
-        current = sec.getAttribute('id');
+const revealTargets = document.querySelectorAll(
+  ".section-title, .section-subtitle, .about-box, .project-card, .edu-card, .skills-grid li, .contact-box, .hero-content, .hero-media"
+);
+
+revealTargets.forEach((node) => {
+  node.classList.add("reveal");
+});
+
+const observer = new IntersectionObserver(
+  (entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        obs.unobserve(entry.target);
       }
     });
-    navAnchors.forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-    });
-  }
+  },
+  { threshold: 0.12 }
+);
 
-  window.addEventListener('scroll', updateActiveLink, { passive: true });
+revealTargets.forEach((node) => observer.observe(node));
+
+window.addEventListener("scroll", () => {
+  updateHeaderState();
   updateActiveLink();
+}, { passive: true });
 
-  /* ---------- Hamburger / mobile nav ---------- */
-  const hamburger = document.getElementById('hamburger');
-  const navLinks  = document.getElementById('navLinks');
-
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      hamburger.classList.toggle('open', isOpen);
-      hamburger.setAttribute('aria-expanded', String(isOpen));
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-    });
-
-    // Close menu when a link is clicked
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
-    });
-
-    // Close on outside click
-    document.addEventListener('click', e => {
-      if (!navbar.contains(e.target) && navLinks.classList.contains('open')) {
-        navLinks.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      }
-    });
-  }
-
-  /* ---------- Scroll-reveal (fade-in) animation ---------- */
-  const fadeEls = document.querySelectorAll(
-    '.section-title, .section-sub, .info-card, .project-card, ' +
-    '.timeline-item, .skill-card, .about-text, .contact-card, .hero-text, .hero-image-wrap'
-  );
-
-  const fadeIndexMap = new Map();
-  fadeEls.forEach((el, index) => {
-    el.classList.add('fade-in');
-    fadeIndexMap.set(el, index);
-  });
-
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const order = fadeIndexMap.get(entry.target) || 0;
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, (order % 6) * 70);
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-
-  fadeEls.forEach(el => revealObserver.observe(el));
-
-  /* ---------- Smooth scroll for anchor links (fallback) ---------- */
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', e => {
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        // Re-show navbar when navigating
-        if (navbar) navbar.classList.remove('hidden');
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-
-})();
+updateHeaderState();
+updateActiveLink();
