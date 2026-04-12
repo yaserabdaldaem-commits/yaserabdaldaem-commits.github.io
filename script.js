@@ -2,6 +2,7 @@ const header = document.getElementById("header");
 const navToggle = document.getElementById("navToggle");
 const navMenu = document.getElementById("navMenu");
 const navLinks = document.querySelectorAll(".nav-link");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (navToggle && navMenu) {
   navToggle.addEventListener("click", () => {
@@ -58,19 +59,25 @@ revealTargets.forEach((node) => {
   node.classList.add("reveal");
 });
 
-const observer = new IntersectionObserver(
-  (entries, obs) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        obs.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
+if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+  revealTargets.forEach((node) => {
+    node.classList.add("visible");
+  });
+} else {
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          obs.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
 
-revealTargets.forEach((node) => observer.observe(node));
+  revealTargets.forEach((node) => observer.observe(node));
+}
 
 window.addEventListener("scroll", () => {
   updateHeaderState();

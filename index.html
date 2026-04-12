@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header / Navigation -->
   <header class="header" id="header">
     <nav class="nav container" aria-label="Main navigation">
       <a href="#hero" class="logo" aria-label="Go to hero section">Yaser<span>.</span></a>
@@ -27,14 +28,16 @@
     </nav>
   </header>
 
+  <!-- Main Content -->
   <main>
+    <!-- Hero Section -->
     <section class="hero" id="hero">
       <div class="hero-grid-pattern" aria-hidden="true"></div>
       <div class="container hero-container">
         <div class="hero-content">
           <p class="hero-greeting">Hello, I'm</p>
           <h1 class="hero-name">Yaser Abd al daem</h1>
-          <h2 class="hero-title">Flutter Developer</h2>
+          <p class="hero-title">Flutter Developer</p>
           <p class="hero-description">Building high-performance mobile applications. I independently designed and shipped three production-ready apps from concept to production.</p>
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">Get In Touch</a>
@@ -53,21 +56,38 @@
       <a href="#about" class="hero-scroll" aria-label="Scroll to about section">Scroll down</a>
     </section>
 
+    <!-- About Section -->
     <section class="section" id="about">
       <div class="container">
-        <p class="section-subtitle">Who I Am</p>
-        <h2 class="section-title">About Me</h2>
-        <div class="about-box">
-          <p>Flutter Developer building high-performance mobile applications. I independently designed and shipped three production-ready apps from concept to production - handling everything from UI/UX design to backend integration, deployment and publishing.</p>
-          <p>Based in Damascus, Syria, I'm passionate about building elegant, user-friendly experiences on mobile using the Flutter and Dart ecosystem alongside Firebase, Docker, and Linux.</p>
+        <header class="section-header">
+          <p class="section-subtitle">Who I Am</p>
+          <h2 class="section-title">About Me</h2>
+        </header>
+        <div class="about-grid">
+          <article class="about-box">
+            <p>Flutter Developer building high-performance mobile applications. I independently designed and shipped three production-ready apps from concept to production - handling everything from UI/UX design to backend integration, deployment and publishing.</p>
+            <p>Based in Damascus, Syria, I'm passionate about building elegant, user-friendly experiences on mobile using the Flutter and Dart ecosystem alongside Firebase, Docker, and Linux.</p>
+          </article>
+          <aside class="info-card" aria-label="Quick profile info">
+            <h3>Profile Info</h3>
+            <div class="info-chips" aria-label="Profile highlights">
+              <span class="info-chip">Location: Damascus, Syria</span>
+              <span class="info-chip">Apps Shipped: 3</span>
+              <span class="info-chip">English: B2-C1</span>
+            </div>
+            <p class="info-note"><strong>English Level:</strong> B2-C1</p>
+          </aside>
         </div>
       </div>
     </section>
 
+    <!-- Projects Section -->
     <section class="section" id="projects">
       <div class="container">
-        <p class="section-subtitle">My Work</p>
-        <h2 class="section-title">Projects</h2>
+        <header class="section-header">
+          <p class="section-subtitle">My Work</p>
+          <h2 class="section-title">Projects</h2>
+        </header>
         <div class="project-grid">
           <article class="project-card">
             <h3>Mouazen</h3>
@@ -105,10 +125,13 @@
       </div>
     </section>
 
+    <!-- Education Section -->
     <section class="section" id="education">
       <div class="container">
-        <p class="section-subtitle">Background</p>
-        <h2 class="section-title">Education &amp; Certifications</h2>
+        <header class="section-header">
+          <p class="section-subtitle">Background</p>
+          <h2 class="section-title">Education &amp; Certifications</h2>
+        </header>
         <div class="education-grid">
           <article class="edu-card edu-card-main">
             <p class="edu-type">University</p>
@@ -130,10 +153,13 @@
       </div>
     </section>
 
+    <!-- Skills Section -->
     <section class="section" id="skills">
       <div class="container">
-        <p class="section-subtitle">Expertise</p>
-        <h2 class="section-title">Skills &amp; Technologies</h2>
+        <header class="section-header">
+          <p class="section-subtitle">Expertise</p>
+          <h2 class="section-title">Skills &amp; Technologies</h2>
+        </header>
         <ul class="skills-grid" aria-label="Technical skills">
           <li class="skill-card">
             <div class="skill-icon" aria-hidden="true">
@@ -262,10 +288,13 @@
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section class="section" id="contact">
       <div class="container">
-        <p class="section-subtitle">Let's Talk</p>
-        <h2 class="section-title">Get In Touch</h2>
+        <header class="section-header">
+          <p class="section-subtitle">Let's Talk</p>
+          <h2 class="section-title">Get In Touch</h2>
+        </header>
         <div class="contact-box">
           <p>Have a project in mind or want to collaborate? Feel free to reach out - I'm always open to new opportunities and interesting conversations.</p>
           <div class="contact-links">
@@ -277,6 +306,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container footer-content">
       <p>&copy; <span id="year"></span> Yaser Abd al daem. All rights reserved.</p>
