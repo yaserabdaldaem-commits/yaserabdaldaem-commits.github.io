@@ -47,7 +47,12 @@
         </div>
         <div class="hero-media">
           <div class="hero-image-frame">
-            <img src="profile.jpg" alt="Yaser Abd al daem profile photo" class="hero-photo" />
+            <div class="hero-photo hero-photo-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 200 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="80" r="52" fill="rgba(121,203,255,0.12)" stroke="rgba(121,203,255,0.35)" stroke-width="1.5"/>
+                <path d="M30 210 C30 160 170 160 170 210" fill="rgba(121,203,255,0.10)" stroke="rgba(121,203,255,0.35)" stroke-width="1.5"/>
+              </svg>
+            </div>
           </div>
           <div class="hero-badge hero-badge-one">Flutter</div>
           <div class="hero-badge hero-badge-two">3 Apps Shipped</div>
@@ -103,10 +108,16 @@
           <article class="project-card">
             <h3>Time Tracker Pro</h3>
             <p>A professional time tracking application built with Flutter. Allows users to log work sessions, manage projects, and generate detailed productivity reports with a clean, modern UI.</p>
+            <div class="dev-inline">
+              <img src="profile.jpg" alt="Yaser Abd al daem" class="avatar" />
+              <div>
+                <p class="dev-name">Built by Yaser</p>
+                <p class="dev-role">Flutter Developer</p>
+              </div>
+            </div>
             <div class="tech-row">
               <span>Flutter</span>
               <span>Dart</span>
-              <span>SQLite</span>
             </div>
             <a href="https://github.com/yaserabdaldaem-commits/time-tracker" target="_blank" rel="noopener noreferrer" aria-label="Open Time Tracker Pro GitHub repository">View on GitHub</a>
           </article>
